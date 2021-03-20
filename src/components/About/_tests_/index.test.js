@@ -22,5 +22,5 @@ describe('About component', () => {  //describe is a function from Jenst
         const { asFragment } = render(<About />);
         expect(asFragment()).toMatchSnapshot();
       });
-})
+}) 
 
