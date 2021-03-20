@@ -16,16 +16,19 @@ const Nav = () => {
         },
       ];
 
-      
+      function categorySelected(name) {
+        console.log(`${name} clicked`)
+      }
+
     return (
-    <header>
-        <h2>
+    <header className="d-inline">
+        <h2 className="d-flex" style={{width: "25vw", margin: "0"}}>
           <a href="/">
             <span role="img" aria-label="camera"> 📸</span> Oh Snap!
           </a>
         </h2>
-        <nav>
-          <ul className="flex-row">
+        <nav className="w-50 d-flex" style={{width: "75vw", margin: "0"}}>
+          <ul className="flex-row ">
             <li className="mx-2">
               <a href="#about">
                 About me
@@ -39,7 +42,7 @@ const Nav = () => {
                 className="mx-1"
                 key={category.name}
               >
-                <span>
+                <span onClick={() => categorySelected(category.name)}>
                   {category.name}
                 </span>
               </li>
