@@ -21,13 +21,13 @@ const Nav = () => {
       }
 
     return (
-    <header className="d-inline">
-        <h2 className="d-flex" style={{width: "25vw", margin: "0"}}>
+    <header>
+        <h2>
           <a href="/">
             <span role="img" aria-label="camera"> 📸</span> Oh Snap!
           </a>
         </h2>
-        <nav className="w-50 d-flex" style={{width: "75vw", margin: "0"}}>
+        <nav>
           <ul className="flex-row ">
             <li className="mx-2">
               <a href="#about">
