@@ -6,6 +6,8 @@ import ContactForm from "./components/Contact";
 
 function App() {
 
+  const [contactSelected, setContactSelected] = useState(false);
+
   const [categories] = useState([
     {
       name: 'commercial',
@@ -20,15 +22,22 @@ function App() {
 
   return (
     <div>
-      <Nav 
+    <Nav
       categories={categories}
       setCurrentCategory={setCurrentCategory}
       currentCategory={currentCategory}
-      />
+      contactSelected={contactSelected}
+      setContactSelected={setContactSelected}
+    />
       <main>
-        <ContactForm />
+      {!contactSelected ? (
+      <>
         <Gallery currentCategory={currentCategory} />
         <About />
+      </>
+        ) : (
+          <ContactForm />
+        )}
       </main>
     </div>
   );
