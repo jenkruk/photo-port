@@ -107,7 +107,8 @@ const PhotoList = ({category}) => {
             <div className="flex-row">
                 {currentPhotos.map((image, i) => (
                 <img
-                    src={require(`../../assets/small/${category}/${i}.jpg`)}
+                // Had to add .default for images to show.  See solution here: https://stackoverflow.com/questions/43247696/javascript-require-vs-require-default
+                    src={require(`../../assets/small/${category}/${i}.jpg`).default}
                     alt={image.name}
                     className="img-thumbnail mx-1"
                     key={image.name}
